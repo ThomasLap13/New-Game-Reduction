@@ -39,14 +39,14 @@
         </div>
     </nav>
     
-    <header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div class="welcome-screen" id="welcomeScreen">
         <div>
             <h1 class="display-4">Bienvenue sur Game Réduction</h1>
             <p class="lead">Obtenez vos services numériques préférés à prix réduits</p>
-            <button class="btn btn-custom mt-3" onclick="scrollToSection('a-propos')">En savoir plus</button>
+            <button class="btn btn-custom mt-3" onclick="hideWelcome()">En savoir plus</button>
         </div>
-    </header>
-
+    </div>
+    <br><br><br><br><br><br><br><br>
     <div class="container mt-5 fade-in" id="a-propos">
         <h2 class="text-center">À propos de nous</h2>
         <p class="text-center">Game Réduction est une initiative visant à vous aider à économiser sur vos achats numériques.</p>
@@ -57,7 +57,7 @@
         <div class="row text-center">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/jeux-video.jpg" class="card-img-top" alt="Jeux Vidéo">
+                    <img src="https://game-reduction.fr/images/supercell/BS-Pass-Diams.jpg" class="card-img-top" alt="Jeux Vidéo">
                     <div class="card-body">
                         <h5 class="card-title">Jeux Vidéo</h5>
                         <p class="card-text">Profitez des meilleurs prix sur vos jeux préférés.</p>
@@ -67,7 +67,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/streaming.jpg" class="card-img-top" alt="Streaming">
+                    <img src="https://game-reduction.fr/images/streaming/YouTube-Premium.png" class="card-img-top" alt="Streaming">
                     <div class="card-body">
                         <h5 class="card-title">Streaming</h5>
                         <p class="card-text">Accédez à vos plateformes favorites à prix réduit.</p>
@@ -77,15 +77,19 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/microsoft.jpg" class="card-img-top" alt="Microsoft">
+                    <img src="https://game-reduction.fr/images/microsoft/cle-windows.png" class="card-img-top" alt="Microsoft">
                     <div class="card-body">
                         <h5 class="card-title">Microsoft</h5>
-                        <p class="card-text">Bénéficiez d'offres spéciales sur les services Microsoft.</p>
+                        <p class="card-text">Bénéficiez d'offres spéciales.</p>
                         <a href="products/microsoft.html" class="btn btn-custom">Découvrir</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div>
+        <br><br><br><br><br><br><br><br>
     </div>
 
     <footer>
