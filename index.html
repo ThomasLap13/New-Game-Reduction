@@ -9,92 +9,146 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/avis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@450&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/da/PP.png" type="image/x-icon">
 </head>
 
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/da/PP.png" alt="Logo" height="50">
-            </a>            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#a-propos">À propos</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shopping</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="shopping/jeux-video.html">Jeux Vidéo</a></li>
-                            <li><a class="dropdown-item" href="shopping/streaming.html">Streaming</a></li>
-                            <li><a class="dropdown-item" href="shopping/microsoft.html">Microsoft</a></li>
-                            <li><a class="dropdown-item" href="shopping/discord.html">Discord</a></li>
-                        </ul>
-                    </li>                    
-                    <li class="nav-item"><a class="nav-link" href="#comment-commander">Comment commander ?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/da/PP.png" alt="Logo Game Réduction" height="50" loading="lazy">
+                </a>            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#a-propos">À propos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Shopping</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="shopping/jeux-video.html">Jeux Vidéo</a></li>
+                                <li><a class="dropdown-item" href="shopping/streaming.html">Streaming</a></li>
+                                <li><a class="dropdown-item" href="shopping/microsoft.html">Microsoft</a></li>
+                                <li><a class="dropdown-item" href="shopping/discord.html">Discord</a></li>
+                            </ul>
+                        </li>                    
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     
-    <div class="welcome-screen" id="welcomeScreen">
-        <div>
-            <h1 class="display-4">Bienvenue sur Game Réduction</h1>
-            <p class="lead">Obtenez vos services numériques préférés à prix réduits</p>
-            <button class="btn btn-custom mt-3" onclick="hideWelcome()">En savoir plus</button>
-        </div>
-    </div>
-    <br><br><br><br><br><br><br><br>
-    <div class="container mt-5 fade-in" id="a-propos">
-        <h2 class="text-center">À propos de nous</h2>
-        <p class="text-center">Game Réduction est une initiative visant à vous aider à économiser sur vos achats numériques.</p>
-    </div>    
-
-    <div class="container mt-5 fade-in" id="offres">
-        <h2 class="text-center">Nos Offres</h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://game-reduction.fr/images/supercell/BS-Pass-Diams.jpg" class="card-img-top" alt="Jeux Vidéo">
-                    <div class="card-body">
-                        <h5 class="card-title">Jeux Vidéo</h5>
-                        <p class="card-text">Profitez des meilleurs prix sur vos jeux préférés.</p>
-                        <a href="shopping/jeux-video.html" class="btn btn-custom">Découvrir</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://game-reduction.fr/images/streaming/YouTube-Premium.png" class="card-img-top" alt="Streaming">
-                    <div class="card-body">
-                        <h5 class="card-title">Streaming</h5>
-                        <p class="card-text">Accédez à vos plateformes favorites à prix réduit.</p>
-                        <a href="shopping/streaming.html" class="btn btn-custom">Découvrir</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://game-reduction.fr/images/microsoft/cle-windows.png" class="card-img-top" alt="Microsoft">
-                    <div class="card-body">
-                        <h5 class="card-title">Microsoft</h5>
-                        <p class="card-text">Bénéficiez d'offres spéciales.</p>
-                        <a href="shopping/microsoft.html" class="btn btn-custom">Découvrir</a>
-                    </div>
-                </div>
+    <main>
+        <div class="welcome-screen" id="welcomeScreen">
+            <div>
+                <h1 class="display-4">Bienvenue sur Game Réduction</h1>
+                <p class="lead">Économisez jusqu'à <span style="color: #36ae1b;">70%</span> sur vos services préférés</p>
+                <button class="btn btn-custom mt-3" onclick="hideWelcome()">En savoir plus</button>
             </div>
         </div>
-    </div>
 
-    <div>
-        <br><br><br><br><br><br><br><br>
-    </div>
+        <div style="min-height: 600px;"></div>
+
+        <div class="container mt-5 hidden" id="a-propos">
+            <h2 class="text-center">À propos de nous</h2>
+            <p class="text-center">Game Réduction est une initiative visant à vous aider à économiser sur vos achats numériques.</p>
+            <p class="text-center">Notre objectif principal est de vous accompagner dans vos achats en ligne afin de vous faire économiser un maximum d'argent. Nous souhaitons offrir une expérience conviviale et accessible à tous, en mettant l’accent sur la qualité et la proximité.</p>
+        </div>    
+        
+        <div style="min-height: 100px;"></div>
+
+        <div class="container mt-5 hidden" id="offres">
+            <h2 class="text-center">Nos Offres</h2>
+            <div class="row text-center">
+                <div class="col-md-4 hidden">
+                    <div class="card">
+                        <img src="images/da/Jeux.DA.jpg" class="card-img-top" alt="Jeux Vidéo">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeux Vidéo</h5>
+                            <p class="card-text">Profitez des meilleurs prix sur vos jeux préférés.</p>
+                            <a href="shopping/jeux-video.html" class="btn btn-custom">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 hidden">
+                    <div class="card">
+                        <img src="images/da/Streaming.DA.jpg" class="card-img-top" alt="Streaming">
+                        <div class="card-body">
+                            <h5 class="card-title">Streaming</h5>
+                            <p class="card-text">Accédez à vos plateformes favorites à prix réduit.</p>
+                            <a href="shopping/streaming.html" class="btn btn-custom">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 hidden">
+                    <div class="card">
+                        <img src="images/da/Microsoft.DA.jpg" class="card-img-top" alt="Microsoft">
+                        <div class="card-body">
+                            <h5 class="card-title">Microsoft</h5>
+                            <p class="card-text">Bénéficiez d'offres spéciales sur les produits Microsoft.</p>
+                            <a href="shopping/microsoft.html" class="btn btn-custom">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    
+        <div style="min-height: 100px;"></div>
+        
+        <section class="container my-5">
+            <h2 class="text-center">Ce que disent nos clients</h2>
+            <p class="text-center">Découvrez les retours d'expérience de notre communauté satisfaite</p>
+        
+            <div class="row justify-content-center">
+                <!-- Témoignage 1 -->
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white p-4 shadow">
+                        <div class="d-flex align-items-center">
+                            <img src="images/user.jpg" alt="SoloChained" class="rounded-circle me-3" width="50">
+                            <h4 class="mb-0">SoloChained</h4>
+                        </div>
+                        <div class="stars text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i> <!-- Étoile vide -->
+                        </div>
+                        <p>Achat de 2 abonnements Premium sur YouTube ! <strong>Efficace et pour 1.20€ au lieu de 8€ !!!</strong> N'hésitez pas, foncez, c'est mon 5ᵉ achat et comme d'hab, c'est réel ✅</p>
+                    </div>
+                </div>
+        
+                <!-- Témoignage 2 -->
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white p-4 shadow">
+                        <div class="d-flex align-items-center">
+                            <img src="images/user.jpg" alt="JujuKing" class="rounded-circle me-3" width="50">
+                            <h4 class="mb-0">JujuKing</h4>
+                        </div>
+                        <div class="stars text-warning mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Merci beaucoup, 3.88€ le nitro, c'est juste incroyable 🕺. Il s'est connecté au compte puis s'est déconnecté sans problème. Encore merci Game Réduction !</p>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </main>
+    
+    <div style="min-height: 100px;"></div>
 
     <footer>
         <div class="footer-container">

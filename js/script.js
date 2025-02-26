@@ -1,38 +1,48 @@
+
 document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll(".fade-in");
+    const welcomeScreen = document.getElementById("welcomeScreen");
+    let isFadingOut = false;
+    let isHidden = false;
+    let lastScrollY = window.scrollY;
 
-    function checkScroll() {
-        fadeElements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 0.9) { 
-                el.classList.add("visible");
-            }
-        });
+    function startFadeOut() {
+        if (!isFadingOut && !isHidden) {
+            isFadingOut = true;
+            welcomeScreen.style.transition = "opacity 0.5s ease-out";
+            welcomeScreen.style.opacity = "0"; // Animation de disparition
+
+            setTimeout(() => {
+                welcomeScreen.style.display = "none"; // Cache totalement
+                document.body.style.overflow = "auto"; // Réactive le scroll
+                isHidden = true;
+                isFadingOut = false;
+            }, 500);
+        }
     }
 
-    window.addEventListener("scroll", checkScroll);
-    checkScroll(); // Vérifie au chargement
-});
+    function handleScroll() {
+        let currentScrollY = window.scrollY;
 
-let lastScrollY = window.scrollY;
-const welcomeScreen = document.getElementById("welcomeScreen");
+        if (currentScrollY > lastScrollY && !isHidden) {
+            startFadeOut(); // Masquer en descendant
+        } else if (currentScrollY === 0 && isHidden) {
+            // Réaffichage en remontant
+            welcomeScreen.style.display = "flex";
+            setTimeout(() => {
+                welcomeScreen.style.opacity = "1";
+                document.body.style.overflow = "hidden"; // Bloque le scroll
+                isHidden = false;
+            }, 10);
+        }
 
-// Fonction pour cacher le message de bienvenue
-function hideWelcome() {
-    welcomeScreen.classList.add("hidden");
-}
-
-// Détection du scroll pour afficher/masquer le message
-window.addEventListener("scroll", function() {
-    let currentScrollY = window.scrollY;
-
-    if (currentScrollY === 0) {
-        // Si l'utilisateur revient tout en haut, on affiche le message
-        welcomeScreen.classList.remove("hidden");
-    } else if (currentScrollY > lastScrollY) {
-        // Si l'utilisateur descend, on cache le message
-        welcomeScreen.classList.add("hidden");
+        lastScrollY = currentScrollY;
     }
 
-    lastScrollY = currentScrollY;
+    // Bloque le scroll au début
+    document.body.style.overflow = "hidden";
+
+    // Détection du scroll et des interactions
+    document.addEventListener("wheel", startFadeOut);
+    document.addEventListener("touchmove", startFadeOut);
+    window.addEventListener("scroll", handleScroll);
 });

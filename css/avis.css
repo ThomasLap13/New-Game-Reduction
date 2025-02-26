@@ -1,0 +1,31 @@
+/* ===================== */
+/* Témoignages - Avis Clients (Bootstrap) */
+/* ===================== */
+.testimonials-section {
+    padding: 50px 20px;
+    background-color: #1E3D32;
+    border-radius: 15px;
+    color: white;
+}
+
+.testimonial-card {
+    background: #14281D;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+}
+
+.stars {
+    font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+}

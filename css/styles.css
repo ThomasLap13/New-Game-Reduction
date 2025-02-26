@@ -2,10 +2,11 @@
 /* Styles Généraux */
 /* ===================== */
 body {
-    background-color: #14281D;
     font-family: 'Outfit', sans-serif;
+    background-color: #14281D;
     color: white;
-    padding-top: 80px; /* Ajuste selon la hauteur de la navbar */
+    padding-top: 80px;
+    overflow-x: hidden;
 }
 
 /* ===================== */
@@ -13,7 +14,7 @@ body {
 /* ===================== */
 .navbar {
     background-color: #14281D;
-    transition: background 0.3s;
+    transition: background 0.3s ease-in-out;
 }
 
 .navbar.scrolled {
@@ -28,21 +29,59 @@ body {
     object-fit: cover;
 }
 
+.navbar-brand:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
 /* Menu déroulant au survol */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
 
+/* Menu déroulant avec fond transparent */
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.26);
+    border: none;
+}
+
+/* Couleur du texte dans le menu */
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.171);
+}
+
 /* ===================== */
-/* Bouton Personnalisé */
+/* Boutons Personnalisés */
 /* ===================== */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 66, 49, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 66, 49, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 66, 49, 0.5);
+    }
+}
+
 .btn-custom {
     background-color: #ff4231;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Boutons plus petits */
     border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    animation: pulse 3s infinite;
 }
 
 .btn-custom:hover {
@@ -79,7 +118,7 @@ body {
 }
 
 .hero-section {
-    padding-top: 100px; /* Ajuste selon tes besoins */
+    padding-top: 100px;
 }
 
 .container {
@@ -87,7 +126,7 @@ body {
     text-align: center;
 }
 
-/* Titre Principal */
+/* Titres */
 h2 {
     text-align: center;
     margin-bottom: 30px;
