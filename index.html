@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Game Réduction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/da/PP.png" alt="Logo" height="50">
+            </a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#a-propos">À propos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shopping</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="products/jeux-video.html">Jeux Vidéo</a></li>
+                            <li><a class="dropdown-item" href="products/streaming.html">Streaming</a></li>
+                            <li><a class="dropdown-item" href="products/microsoft.html">Microsoft</a></li>
+                            <li><a class="dropdown-item" href="products/discord.html">Discord</a></li>
+                        </ul>
+                    </li>                    
+                    <li class="nav-item"><a class="nav-link" href="#comment-commander">Comment commander ?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+        <div>
+            <h1 class="display-4">Bienvenue sur Game Réduction</h1>
+            <p class="lead">Obtenez vos services numériques préférés à prix réduits</p>
+            <button class="btn btn-custom mt-3" onclick="scrollToSection('a-propos')">En savoir plus</button>
+        </div>
+    </header>
+
+    <div class="container mt-5 fade-in" id="a-propos">
+        <h2 class="text-center">À propos de nous</h2>
+        <p class="text-center">Game Réduction est une initiative visant à vous aider à économiser sur vos achats numériques.</p>
+    </div>    
+
+    <div class="container mt-5 fade-in" id="offres">
+        <h2 class="text-center">Nos Offres</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/jeux-video.jpg" class="card-img-top" alt="Jeux Vidéo">
+                    <div class="card-body">
+                        <h5 class="card-title">Jeux Vidéo</h5>
+                        <p class="card-text">Profitez des meilleurs prix sur vos jeux préférés.</p>
+                        <a href="products/jeux-video.html" class="btn btn-custom">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/streaming.jpg" class="card-img-top" alt="Streaming">
+                    <div class="card-body">
+                        <h5 class="card-title">Streaming</h5>
+                        <p class="card-text">Accédez à vos plateformes favorites à prix réduit.</p>
+                        <a href="products/streaming.html" class="btn btn-custom">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/microsoft.jpg" class="card-img-top" alt="Microsoft">
+                    <div class="card-body">
+                        <h5 class="card-title">Microsoft</h5>
+                        <p class="card-text">Bénéficiez d'offres spéciales sur les services Microsoft.</p>
+                        <a href="products/microsoft.html" class="btn btn-custom">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h4><span style="font-weight: bold;">Game</span><span style="color: #36ae1b;">Réduction</span></h4>
+                <p>La meilleure plateforme pour économiser sur vos jeux vidéo et abonnements numériques.</p>
+                <p>Game Réduction n'est ni affilié, ni partenaire des entreprises et marques mentionnées sur ce site.</p>
+                <p>Les noms, logos et produits cités restent la propriété exclusive de leurs détenteurs respectifs.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <a href="https://game-reduction.fr" class="footer-link">Accueil</a><br>
+                    <a href="a-propos.html" class="footer-link">À propos</a><br>
+                    <a href="shopping.html" class="footer-link">Shopping</a><br>
+                    <a href="comment-commander.html" class="footer-link">Comment commander ?</a><br>
+                    <a href="contact.html" class="footer-link">Contact</a><br>
+                </ul>
+            </div>                    
+    
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <ul class="footer-links">
+                    <a href="politique-de-confidentialite.html" class="footer-link">Politique de confidentialité</a><br>
+                    <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+                </ul>
+            </div>            
+    
+            <div class="footer-section">
+                <h4>Réseaux sociaux</h4>
+                <div class="social-icons">
+                    <a href="https://x.com/GameReduction" target="_blank" class="me-3">
+                        <i class="bi bi-twitter-x" style="font-size: 1.5rem; color: #36ae1b;"></i>
+                    </a>
+                    <a href="https://discord.gg/mUGhG8S6Km" target="_blank" class="me-3">
+                        <i class="bi bi-discord" style="font-size: 1.5rem; color: #36ae1b;"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@GameReduction" target="_blank">
+                        <i class="bi bi-youtube" style="font-size: 1.5rem; color: #36ae1b;"></i>
+                    </a>
+                </div>
+            </div>            
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Game Réduction. Tous droits réservés.
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
