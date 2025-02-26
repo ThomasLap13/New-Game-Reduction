@@ -100,7 +100,11 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #14281D;
+    background-image: url("../images/da/backgound.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
     display: flex;
     align-items: center;
@@ -161,13 +165,13 @@ h2 {
 /* ===================== */
 /* Effet d'Apparition */
 /* ===================== */
-.fade-in {
+.hidden {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in.visible {
+.visible {
     opacity: 1;
     transform: translateY(0);
 }

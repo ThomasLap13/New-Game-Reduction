@@ -1,48 +1,34 @@
+//system apparissions éléments
 
 document.addEventListener("DOMContentLoaded", function () {
-    const welcomeScreen = document.getElementById("welcomeScreen");
-    let isFadingOut = false;
-    let isHidden = false;
-    let lastScrollY = window.scrollY;
+    const elements = document.querySelectorAll(".hidden");
 
-    function startFadeOut() {
-        if (!isFadingOut && !isHidden) {
-            isFadingOut = true;
-            welcomeScreen.style.transition = "opacity 0.5s ease-out";
-            welcomeScreen.style.opacity = "0"; // Animation de disparition
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible"); // Se recache en remontant
+            }
+        });
+    }, { threshold: 0.2 });
 
-            setTimeout(() => {
-                welcomeScreen.style.display = "none"; // Cache totalement
-                document.body.style.overflow = "auto"; // Réactive le scroll
-                isHidden = true;
-                isFadingOut = false;
-            }, 500);
-        }
-    }
-
-    function handleScroll() {
-        let currentScrollY = window.scrollY;
-
-        if (currentScrollY > lastScrollY && !isHidden) {
-            startFadeOut(); // Masquer en descendant
-        } else if (currentScrollY === 0 && isHidden) {
-            // Réaffichage en remontant
-            welcomeScreen.style.display = "flex";
-            setTimeout(() => {
-                welcomeScreen.style.opacity = "1";
-                document.body.style.overflow = "hidden"; // Bloque le scroll
-                isHidden = false;
-            }, 10);
-        }
-
-        lastScrollY = currentScrollY;
-    }
-
-    // Bloque le scroll au début
-    document.body.style.overflow = "hidden";
-
-    // Détection du scroll et des interactions
-    document.addEventListener("wheel", startFadeOut);
-    document.addEventListener("touchmove", startFadeOut);
-    window.addEventListener("scroll", handleScroll);
+    elements.forEach(element => observer.observe(element));
 });
+
+function hideWelcome() {
+    let section = document.getElementById("hidden");
+    let welcomeScreen = document.getElementById("welcomeScreen");
+
+    // Supprime la classe "hidden" pour afficher la section
+    section.classList.remove("hidden");
+
+    // Masque l'écran de bienvenue progressivement
+    welcomeScreen.style.opacity = "0";
+    setTimeout(() => {
+        welcomeScreen.style.display = "none";
+    }, 800); // 800ms pour correspondre à la transition CSS
+
+    // Scroll fluide vers la section "À propos"
+    section.scrollIntoView({ behavior: "smooth" });
+}

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/avis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#a-propos">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Shopping</a>
                             <ul class="dropdown-menu">
@@ -39,7 +38,8 @@
                                 <li><a class="dropdown-item" href="shopping/microsoft.html">Microsoft</a></li>
                                 <li><a class="dropdown-item" href="shopping/discord.html">Discord</a></li>
                             </ul>
-                        </li>                    
+                        </li>
+                                            <li class="nav-item"><a class="nav-link" href="#comment-commander">Comment commander ?</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -52,22 +52,27 @@
             <div>
                 <h1 class="display-4">Bienvenue sur Game Réduction</h1>
                 <p class="lead">Économisez jusqu'à <span style="color: #36ae1b;">70%</span> sur vos services préférés</p>
-                <button class="btn btn-custom mt-3" onclick="hideWelcome()">En savoir plus</button>
+                <button class="btn-custom mt-3" onclick="hideWelcome()">En savoir plus</button>
             </div>
         </div>
 
-        <div style="min-height: 600px;"></div>
+
+        <div class="container mt-5 hidden" id="hidden">
+            <div style="min-height: 300px;"></div>
+        </div>
+        
 
         <div class="container mt-5 hidden" id="a-propos">
             <h2 class="text-center">À propos de nous</h2>
             <p class="text-center">Game Réduction est une initiative visant à vous aider à économiser sur vos achats numériques.</p>
             <p class="text-center">Notre objectif principal est de vous accompagner dans vos achats en ligne afin de vous faire économiser un maximum d'argent. Nous souhaitons offrir une expérience conviviale et accessible à tous, en mettant l’accent sur la qualité et la proximité.</p>
         </div>    
+        <div style="min-height: 300px;"></div>
         
-        <div style="min-height: 100px;"></div>
 
         <div class="container mt-5 hidden" id="offres">
             <h2 class="text-center">Nos Offres</h2>
+            <hr>
             <div class="row text-center">
                 <div class="col-md-4 hidden">
                     <div class="card">
@@ -101,12 +106,13 @@
                 </div>
             </div>
         </div>    
-    
-        <div style="min-height: 100px;"></div>
+        <div style="min-height: 300px;"></div>
         
-        <section class="container my-5">
+
+        <div class="container mt-5 hidden" id="Avis">
             <h2 class="text-center">Ce que disent nos clients</h2>
             <p class="text-center">Découvrez les retours d'expérience de notre communauté satisfaite</p>
+            <hr>
         
             <div class="row justify-content-center">
                 <!-- Témoignage 1 -->
@@ -145,10 +151,9 @@
                     </div>
                 </div>
             </div>
-        </section>    
+        </div>
     </main>
-    
-    <div style="min-height: 100px;"></div>
+    <div style="min-height: 300px;"></div>
 
     <footer>
         <div class="footer-container">
@@ -198,6 +203,7 @@
         </div>
     </footer>
 
+    <script src="js/scroll.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
