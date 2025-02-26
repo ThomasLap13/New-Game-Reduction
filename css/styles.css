@@ -47,7 +47,7 @@ body {
 
 /* Couleur du texte dans le menu */
 .dropdown-menu .dropdown-item {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -74,7 +74,7 @@ body {
 
 .btn-custom {
     background-color: #ff4231;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 20px; /* Boutons plus petits */
     border-radius: 5px;
@@ -183,4 +183,45 @@ h2 {
     .card {
         margin-bottom: 20px;
     }
+
+    .category-menu {
+        top: 70px; /* Ajustement si la navbar est plus petite */
+        padding: 5px 0;
+    }
+
+    .category-menu a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
+
+/* Personnalisation de la scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Largeur de la scrollbar */
+    height: 12px; /* Hauteur de la scrollbar horizontale */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #f1f1f12d; /* Couleur du "pouce" (partie déplaçable) */
+    border-radius: 10px; /* Bords arrondis */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Ombre douce autour du pouce */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f12d; /* Couleur du fond de la scrollbar */
+    border-radius: 10px; /* Bords arrondis de la piste */
+  }
+  
+  ::-webkit-scrollbar-button {
+    background-color: transparent; /* Pas de bouton visible sur les flèches */
+  }
+  
+  /* Si tu veux une scrollbar horizontale personnalisée */
+  ::-webkit-scrollbar-horizontal {
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb:horizontal {
+    background-color: #f1f1f12d;
+    border-radius: 10px;
+  }

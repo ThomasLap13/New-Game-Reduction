@@ -1,0 +1,44 @@
+/* ===================== */
+/* Navbar Catégories */
+/* ===================== */
+.category-navbar {
+    position: fixed;
+    top: 60px; /* Juste en dessous de la navbar principale */
+    width: 100%;
+    padding: 1px 0;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 998;
+}
+
+/* Centrage des liens */
+.category-navbar .navbar-nav {
+    text-align: center;
+}
+
+.category-navbar .nav-item {
+    margin: 0 15px;
+}
+
+.category-navbar .nav-link {
+    padding: 10px 20px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.category-navbar .nav-link:hover {
+    color: white;
+    border-radius: 5px;
+}
+
+/* ===================== */
+/* Responsivité */
+/* ===================== */
+@media (max-width: 992px) {
+    .category-navbar {
+        top: 56px;
+        padding: 5px 0;
+    }
+
+    .category-navbar .nav-item {
+        margin: 5px 0;
+    }
+}
