@@ -41,7 +41,7 @@ body {
 
 /* Menu déroulant avec fond transparent */
 .dropdown-menu {
-    background: rgba(0, 0, 0, 0.26);
+    background: rgba(0, 0, 0, 0.479);
     border: none;
 }
 

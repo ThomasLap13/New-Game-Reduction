@@ -32,3 +32,20 @@ function hideWelcome() {
     // Scroll fluide vers la section "À propos"
     section.scrollIntoView({ behavior: "smooth" });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Récupère l'élément Supercell dans le menu
+    let supercellLink = document.querySelector('a.nav-link[href="#Supercell"]');
+
+    if (supercellLink) {
+        supercellLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Empêche le comportement par défaut
+
+            let targetElement = document.getElementById("Supercell");
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    }
+});
+
