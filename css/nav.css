@@ -6,7 +6,7 @@
     top: 60px; /* Juste en dessous de la navbar principale */
     width: 100%;
     padding: 1px 0;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.459);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.555);
     z-index: 998;
 }
 
@@ -27,6 +27,30 @@
 .category-navbar .nav-link:hover {
     color: white;
     border-radius: 5px;
+}
+
+/* Gestion de l'affichage des dropdowns */
+.category-navbar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2000;
+}
+
+/* Affichage fluide du menu quand Bootstrap active .show */
+.category-navbar .dropdown.show .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown Animation */
+/* Masque les menus par défaut avec animation */
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
+    display: none;
 }
 
 /* ===================== */

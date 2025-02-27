@@ -1,6 +1,5 @@
-//system apparissions éléments
-
-document.addEventListener("DOMContentLoaded", function () {
+// Apparition progressive des éléments lorsqu'ils entrent dans le viewport
+document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".hidden");
 
     const observer = new IntersectionObserver(entries => {
@@ -11,19 +10,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 entry.target.classList.remove("visible"); // Se recache en remontant
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.2 }); // Se déclenche lorsque 20% de l'élément est visible
 
     elements.forEach(element => observer.observe(element));
 });
 
+// Fonction pour masquer l'écran de bienvenue et afficher la section principale
 function hideWelcome() {
-    let section = document.getElementById("hidden");
-    let welcomeScreen = document.getElementById("welcomeScreen");
+    const section = document.getElementById("hidden");
+    const welcomeScreen = document.getElementById("welcomeScreen");
 
-    // Supprime la classe "hidden" pour afficher la section
-    section.classList.remove("hidden");
+    if (!section || !welcomeScreen) return; // Sécurité si les éléments n'existent pas
 
-    // Masque l'écran de bienvenue progressivement
+    section.classList.remove("hidden"); // Affiche la section principale
+
+    // Masque progressivement l'écran de bienvenue
     welcomeScreen.style.opacity = "0";
     setTimeout(() => {
         welcomeScreen.style.display = "none";
@@ -33,19 +34,35 @@ function hideWelcome() {
     section.scrollIntoView({ behavior: "smooth" });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Récupère l'élément Supercell dans le menu
-    let supercellLink = document.querySelector('a.nav-link[href="#Supercell"]');
+// Gestion des dropdowns pour les menus déroulants
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".dropdown-toggle").forEach(dropdown => {
+        dropdown.addEventListener("click", function (event) {
+            event.stopPropagation(); // Empêche la propagation du clic
+            const parentDropdown = this.closest(".dropdown");
+            const isOpen = parentDropdown.classList.contains("show");
 
-    if (supercellLink) {
-        supercellLink.addEventListener("click", function (event) {
-            event.preventDefault(); // Empêche le comportement par défaut
+            // Fermer tous les menus ouverts
+            document.querySelectorAll(".dropdown").forEach(el => {
+                el.classList.remove("show");
+                el.querySelector(".dropdown-menu").classList.remove("show");
+            });
 
-            let targetElement = document.getElementById("Supercell");
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: "smooth" });
+            // Basculer l'état du menu actuel
+            if (!isOpen) {
+                parentDropdown.classList.add("show");
+                this.nextElementSibling.classList.add("show");
             }
         });
-    }
-});
+    });
 
+    // Fermer le menu dropdown lorsqu'on clique ailleurs
+    document.addEventListener("click", event => {
+        if (!event.target.closest(".dropdown")) {
+            document.querySelectorAll(".dropdown").forEach(el => {
+                el.classList.remove("show");
+                el.querySelector(".dropdown-menu").classList.remove("show");
+            });
+        }
+    });
+});
