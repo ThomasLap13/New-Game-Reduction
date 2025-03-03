@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const welcomeScreen = document.getElementById("welcomeScreen");
     let isFadingOut = false;
