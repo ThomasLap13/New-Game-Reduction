@@ -25,4 +25,4 @@ Pour contribuer ou exécuter le projet localement, suivez ces étapes :
 
 1. **Cloner le Dépôt** :
    ```bash
-   git clone https://github.com/votre-utilisateur/game-reduction.git
+   git clone https://github.com/ThomasLap13/New-Game-Reduction.git
