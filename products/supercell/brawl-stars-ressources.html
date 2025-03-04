@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brawl Stars Ressources - Game Réduction</title>
-    <meta property="og:title" content="Brawl Stars Ressources - Game Réduction">
-    <meta property="og:description" content="Ressources a la demande !">
-    <meta property="og:image" content="https://game-reduction.fr/images/supercell/BS-Ressources.jpg">
-    <meta property="og:url" content="https://game-reduction.fr/products/supercell/brawl-stars-ressources.html">
-    <meta property="og:type" content="product">
-    <meta property="product:price:amount" content="1.92">
-    <meta property="product:price:currency" content="EUR">
-    <meta property="product:availability" content="in stock">
-    <link rel="shortcut icon" href="../../css/da/pp.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/tableau.css">
-    <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/tableau.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@450&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../images/da/PP.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <a href="../../shopping.html?category=supercell">
-            <img src="../../css/da/retour.png" alt="Retour" class="return-img">
-        </a>
-        <a href="https://game-reduction.fr">
-            <img src="../../css/da/pp.jpg" alt="Game Réduction" class="profile-img">
-        </a>
-        <br>
-        <div class="header-content">
-            <h1>Ressources</h1>
-        </div>
+        <!-- Navbar principale -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <img src="../../images/da/PP.png" alt="Logo Game Réduction" height="50" loading="lazy">
+                </a>            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../a-propos.html">À propos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Shopping</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../shopping/jeux-video.html">Jeux Vidéo</a></li>
+                                <li><a class="dropdown-item" href="../../shopping/streaming.html">Streaming</a></li>
+                                <li><a class="dropdown-item" href="../../shopping/microsoft.html">Microsoft</a></li>
+                                <li><a class="dropdown-item" href="../../shopping/discord.html">Discord</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../../comment-commander.html">Comment commander ?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <section>
-        <div class="product-paragraph">
-            <h2>Les différentes offres</h2>
-            <hr>
-            <iframe 
-                width="800" height="450" src="https://www.youtube.com/embed/pDHjsd1op6I?si=hkpHa-dAY0hqANDF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-            <table>
+    <div class="category-section nitro-benefits">
+        <div style="min-height: 50px;"></div>
+        <h2>Les différentes offres</h2>
+        <hr>
+        <iframe
+            width="800" height="450" src="https://www.youtube.com/embed/pDHjsd1op6I?si=hkpHa-dAY0hqANDF"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <table class="table table-striped table-bordered">
+            <thead>
                 <tr>
                     <th>Prix</th>
-                    <th>Gemmes
-                    </th>
+                    <th>Gemmes</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>💰 100,95€</td>
                     <td>2000 Gemmes + Bonus 200 Gemmes.</td>
@@ -75,13 +89,15 @@
                     <td>💰 1,92€</td>
                     <td>30 Gemmes + Bonus 3 Gemmes.</td>
                 </tr>
-            </table>
-            <a href="../../comment-commander.html">
-                <button>Acheter maintenant</button>
-            </a>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <a href="../../comment-commander.html" class="btn btn-custom">Acheter maintenant</a>
         </div>
-    </section>
-
+    </div>
+    
+    <div style="min-height: 200px;"></div>
+    
     <footer>
         <div class="footer-container">
             <div class="footer-section about">
@@ -133,6 +149,7 @@
         </div>
     </footer>
     
-    <script src="js/script.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
